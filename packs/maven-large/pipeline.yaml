@@ -1,0 +1,9 @@
+extends:
+  import: kubernetes
+  file: maven/pipeline.yaml
+pipelines:
+  release:
+    build:
+      preSteps:
+      - sh: export _JAVA_OPTIONS="-Xms10m -Xmx2048m -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90"
+        name: Set larger XMX for Rainman Console build
