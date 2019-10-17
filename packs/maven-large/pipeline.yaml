@@ -1,6 +1,5 @@
 extends:
-  import: kubernetes
-  file: maven/pipeline.yaml
+  file: ../maven/pipeline.yaml
 pipelines:
   release:
     build:

@@ -1,0 +1,5 @@
+extends:
+  import: classic
+  file: javascript/pipeline.yaml
+agent:
+  image: msavy/jx-builder-nodejs10-compose:latest
